@@ -8,15 +8,16 @@ class App{
     public function __construct(){
         $this->router();
 
-        if(class_exists($this->class))
+        print_r($this->class);
 
-        $object = new $this->class();
+        if(class_exists($this->class)) $object = new $this->class();
+        print_r($object);
     }
 
     private function router(): void{
         $uri = array_filter(explode("/", $_SERVER["REQUEST_URI"]));
 
-        $this->class  = $uri[2] ?? "Teste";
+        $this->class  = "dist\\php\\controllers\\". ($uri[2] ?? "Teste");
         $this->method = $uri[3] ?? "";
     }
 }

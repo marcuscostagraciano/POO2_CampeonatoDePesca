@@ -7,6 +7,7 @@
 
 require_once "dist/php/controllers/core/autoloader.php";
 require_once "dist/php/controllers/core/App.php";
+require_once "dist/php/controllers/Teste.php";
 
 use dist\php\controllers\core\App;
 
