@@ -8,6 +8,8 @@ class Teste{
     public function testeAK(){
         print_r("testei aqui, chora pai");
     }
+
+    
 }
 
 ?>
