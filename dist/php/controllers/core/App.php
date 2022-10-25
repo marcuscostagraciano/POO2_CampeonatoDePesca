@@ -1,6 +1,7 @@
 <?php
 
 namespace dist\php\controllers\core;
+use FFI\Exception;
 
 class App{
     private string $class, $method;

@@ -1,15 +1,12 @@
 <?php
 
 namespace dist\php\controllers;
+use dist\php\views\MainView;
 
 class Teste{
-    public function __construct(){}
-
-    public function testeAK(){
-        print_r("testei aqui, chora pai");
+    public function printView(): void{
+        new MainView("Teste");
     }
-
-    
 }
 
 ?>
