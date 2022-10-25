@@ -12,10 +12,7 @@ use dist\php\controllers\core\App;
 try{
     $router = new App();
 }
-catch(Error $e){
-    print_r($e->getMessage());
-}
-catch(Exception $e){
+catch(Throwable $e){
     print_r($e->getMessage());
 }
 

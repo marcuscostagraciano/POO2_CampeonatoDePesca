@@ -19,7 +19,7 @@ class App{
     private function router(): void{
         $uri = array_filter(explode("/", $_SERVER["REQUEST_URI"]));
 
-        $this->class  = "dist\\php\\controllers\\". ($uri[2] ?? "Teste");
+        $this->class  = "dist\\php\\controllers\\". ($uri[2] ?? "Home");
         $this->method = $uri[3] ?? "printView";
     }
 }
