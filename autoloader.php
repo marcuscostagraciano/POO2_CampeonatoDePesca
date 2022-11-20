@@ -1,9 +1,9 @@
 <?php
 
 spl_autoload_register(function ($class){
-    $class_file = str_replace("\\", "/", $class);
+    $class_file = str_replace("\\", "/", $class) .".php";
 
-    require_once $class_file .".php";
+    if(file_exists($class_file)) require_once $class_file;
 });
 
 ?>
