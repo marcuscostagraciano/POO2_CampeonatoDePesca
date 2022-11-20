@@ -7,7 +7,7 @@
 
 require_once "autoloader.php";
 
-use dist\php\controllers\core\App;
+use dist\controllers\core\App;
 
 try{
     $router = new App();
