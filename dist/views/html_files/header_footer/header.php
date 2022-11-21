@@ -9,3 +9,10 @@
 <body>
 
 <!-- barra de navegação -->
+<div class="navbar">
+    <div>Lorem ipsum</div>
+    <div>Lorem ipsum</div>
+    <div>Lorem ipsum</div>
+</div>
+
+<main>

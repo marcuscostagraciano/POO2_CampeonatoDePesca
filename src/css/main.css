@@ -1,0 +1,9 @@
+.navbar {
+    background-color: #225d6e;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    max-width: 950px;
+}
