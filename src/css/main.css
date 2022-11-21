@@ -1,7 +1,6 @@
 .navbar {
     background-color: #225d6e;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
 }
 
 main {
