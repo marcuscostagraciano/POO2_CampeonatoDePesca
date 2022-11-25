@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <header>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Pescaria</title>
 
-    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="main.css" />
 </header>
 <body>
-
-<!-- barra de navegação -->
-<nav>
-    <p><a href=""></a>Home</p>
-    <p><a href=""></a>Eventos</p>
-</nav>
+    <!-- barra de navegação -->
+    <nav>
+        <p><a href="">Home</a></p>
+        <p><a href="">Eventos</a></p>
+        <p class="text-right"><a href="">Log in</a></p>
+    </nav>
 
 <main>
