@@ -9,10 +9,10 @@
 <body>
 
 <!-- barra de navegação -->
-<div class="navbar">
+<head>
     <div>Lorem ipsum</div>
     <div>Lorem ipsum</div>
     <div>Lorem ipsum</div>
-</div>
+</head>
 
 <main>
