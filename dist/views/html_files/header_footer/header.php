@@ -9,10 +9,9 @@
 <body>
 
 <!-- barra de navegação -->
-<head>
-    <div>Lorem ipsum</div>
-    <div>Lorem ipsum</div>
-    <div>Lorem ipsum</div>
-</head>
+<nav>
+    <p><a href=""></a>Home</p>
+    <p><a href=""></a>Eventos</p>
+</nav>
 
 <main>

@@ -1,36 +1,24 @@
-/*
-
-#364675
-#303440
-#121726
-#1D3375
-#5872BF
-
-*/
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    background-color: #1d1d1d;
+    background-color: #ffffff;
 
-    display: grid;
-    grid-template: 
-        [header-left] "head head" 40px [header-right]
-        [main-left] "main nav" 1fr [main-right]
-        [footer-left] "foot foot" 100px [footer-right]
-        / 1fr 1fr;
+    padding: 0;
+    margin: 0;
 }
 
-head {
-    background-color: #392a5c;
-    
-    grid-area: head;
+nav {
+    background-color: #d4d4d4;
+
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+
+    padding: 1em;
+    margin: 0;
 }
 
 main {
-    background-color: #454545;
-
-    grid-area: main;
+    background-color: #ffffff;
 
     max-width: 950px;
 }
