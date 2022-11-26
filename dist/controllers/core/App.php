@@ -23,8 +23,9 @@ class App{
 
     private function router(): void{
         $uri = array_filter(explode("/", $_SERVER["REQUEST_URI"]));
+        $pasta_padrao = Session::existe() ? "Home" : "Login";
 
-        $this->class  = "dist\\controllers\\". ($uri[1] ?? "Home");
+        $this->class  = "dist\\controllers\\". ($uri[1] ?? $pasta_padrao);
         $this->method = $uri[2] ?? "printView";
     }
 }
