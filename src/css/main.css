@@ -1,0 +1,43 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background-color: #ffffff;
+
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    display: block;
+}
+
+nav {
+    background-color: #d4d4d4;
+
+    display: grid;
+    grid-template-columns: repeat(2, 70px) 1fr;
+
+    padding: 0 20px;
+}
+
+main {
+    background-color: #ffffff;
+
+    width: 40%;
+
+    margin: 0 0 0 35em;
+}
+
+login-container {
+    position: fixed;
+    top: 40%;
+    left: 20%;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
