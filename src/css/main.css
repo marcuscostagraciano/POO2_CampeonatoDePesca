@@ -7,6 +7,10 @@ body {
     margin: 0;
 }
 
+input {
+    display: block;
+}
+
 nav {
     background-color: #d4d4d4;
 
@@ -19,12 +23,15 @@ nav {
 main {
     background-color: #ffffff;
 
-    border: 1px solid black;
+    width: 40%;
 
-    width: 60%;
-    min-height: 950px;
+    margin: 0 0 0 35em;
+}
 
-    margin: 0 0 0 7em;
+login-container {
+    position: fixed;
+    top: 40%;
+    left: 20%;
 }
 
 .text-right {

@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     <title>Pescaria</title>
 
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="/src/css/main.css" />
+
+    <script src="/src/js/main.js"></script>
 </header>
 <body>
     <!-- barra de navegação -->
