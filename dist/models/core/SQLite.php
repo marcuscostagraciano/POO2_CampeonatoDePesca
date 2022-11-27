@@ -1,6 +1,6 @@
 <?php
 
-namespace dist\controllers\core;
+namespace dist\models\core;
 
 use Exception;
 use PDO;

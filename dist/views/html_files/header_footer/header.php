@@ -15,5 +15,6 @@
         <p><a href="">Eventos</a></p>
         <p id="miniatura-usuario" class="text-right"><a href="">Log in</a></p>
     </nav>
+    <button id="deslogar">deslogar</button>
 
 <main>

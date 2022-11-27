@@ -29,10 +29,11 @@ class App{
     }
 
     private function router(): void{
-        $uri = array_filter(explode("/", $_SERVER["REQUEST_URI"]));
+        $uri = array_reverse(array_filter(explode("/", $_SERVER["REQUEST_URI"])));
+        // Session::destruir();
 
         $this->class  = Session::existe() ? "dist\\controllers\\". ($uri[1] ?? "Home") : "dist\\controllers\\Login";
-        $this->method = $uri[2] ?? "printView";
+        $this->method = $uri[0] ?? "printView";
     }
 }
 
