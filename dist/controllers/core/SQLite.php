@@ -29,6 +29,10 @@ class SQLite {
         ? $query->fetchAll(PDO::FETCH_ASSOC)
         : $query->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function fecharConexao(){
+        $this->conexao = null;
+    }
 }
 
 ?>
