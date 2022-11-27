@@ -9,11 +9,6 @@ require_once "autoloader.php";
 
 use dist\controllers\core\App;
 
-try{
-    $router = new App();
-}
-catch(Throwable $e){
-    print_r($e->getMessage());
-}
+$router = new App();
 
 ?>
