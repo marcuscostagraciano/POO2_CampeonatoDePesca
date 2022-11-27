@@ -1,1 +1,1 @@
-<button>deslogar</button>
+<button id="deslogar">deslogar</button>

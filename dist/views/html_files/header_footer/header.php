@@ -13,7 +13,7 @@
     <nav>
         <p><a href="">Home</a></p>
         <p><a href="">Eventos</a></p>
-        <p class="text-right"><a href="">Log in</a></p>
+        <p id="miniatura-usuario" class="text-right"><a href="">Log in</a></p>
     </nav>
 
 <main>

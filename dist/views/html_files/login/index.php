@@ -16,4 +16,4 @@
     </form>
 </login-container>
 
-<script src="/src/js/login.js"></script>
+<!-- <script src="/src/js/login.js"></script> -->

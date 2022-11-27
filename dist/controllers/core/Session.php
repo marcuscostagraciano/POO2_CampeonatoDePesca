@@ -11,7 +11,7 @@ class Session {
         $_SESSION["email"] = $email;
     }
 
-    public static function deletar(): void{
+    public static function destruir(): void{
         $_SESSION = array();
         session_destroy();
     }
