@@ -2,6 +2,7 @@
 
 namespace dist\controllers\core;
 
+use dist\controllers\core\Session;
 use Exception;
 use Throwable;
 

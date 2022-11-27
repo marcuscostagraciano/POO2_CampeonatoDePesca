@@ -18,7 +18,6 @@ class Login {
 
     public function deslogar(): void{
         Session::destruir();
-        header("Refresh:0");
     }
 
     public function existe(): array{

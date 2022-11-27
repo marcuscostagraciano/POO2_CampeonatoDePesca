@@ -8,6 +8,18 @@ fetchJson("Login/existe")
 })
 .catch(rej => mensagemError(rej))
 
+document.querySelector("#deslogar").addEventListener("click", async function(e){
+    e.preventDefault()
+
+    try{
+        const deslogar = await fetchJson("Login/deslogar")
+        location.reload()
+    }
+    catch(rej){
+        mensagemError(rej)
+    }
+})
+
 // Realiza um fetch, lança os erros recebidos e revolve o json no final
 async function fetchJson(url, formData = new FormData, debug = false){
     const res = await fetch(url, {
