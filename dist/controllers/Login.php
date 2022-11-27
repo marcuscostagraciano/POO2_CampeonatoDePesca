@@ -4,6 +4,7 @@ namespace dist\controllers;
 
 use dist\views\MainView;
 use dist\controllers\core\Session;
+use dist\models\LoginModel;
 
 class Login {
     public function printView(): void{
@@ -11,9 +12,9 @@ class Login {
     }
 
     public function logar(): void{
-        $id = 0;
+        $usuario_info = LoginModel::logar($_POST["usuario_login"], $_POST["usuario_senha"]);
 
-        Session::criar($id, $_POST["usuario_login"], $_POST["usuario_senha"]);
+        Session::criar($usuario_info["cpf"], $usuario_info["nome"], $usuario_info["email"]);
     }
 
     public function deslogar(): void{

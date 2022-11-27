@@ -9,10 +9,11 @@ class SQLite {
     private $conexao;
 
     public function __construct(){
-        $this->conexao = new PDO("sqlite:/src/sqlite/pesca.db"); // Cria conexao com o banco
+        $this->fecharConexao();
+        $this->conexao = new PDO("sqlite:/src/sqlite/campeonato_pesca.db"); // Cria conexao com o banco
     }
 
-    public function query(string $sql, array $parametros, bool $fetchAll = true, bool $debug = false): array{
+    public function query(string $sql, array $parametros = [], bool $fetchAll = true, bool $debug = false): array{
         $query = $this->conexao->prepare($sql); // Prepara o sql
 
         // Verifica se houve erros na execução.

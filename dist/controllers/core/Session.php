@@ -5,8 +5,8 @@ namespace dist\controllers\core;
 session_start();
 
 class Session {
-    public static function criar(int $id, string $nome, string $email): void{
-        $_SESSION["id"]    = $id;
+    public static function criar(int $cpf, string $nome, string $email): void{
+        $_SESSION["cpf"]    = $cpf;
         $_SESSION["nome"]  = $nome;
         $_SESSION["email"] = $email;
     }

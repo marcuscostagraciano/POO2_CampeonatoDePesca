@@ -20,20 +20,24 @@ class App{
             if(class_exists($this->class)) $object = new $this->class();
             else throw new Exception("Não foi possível encontrar a classe {$this->class}");
 
-            if(method_exists($object, $this->method)) echo json_encode(call_user_func_array([$object, $this->method], []));
+            if(method_exists($object, $this->method)) {
+                $resultado = call_user_func_array([$object, $this->method], []);
+
+                echo json_encode([
+                    "ok"      => true,
+                    "retorno" => $resultado
+                ]);
+            }
             else throw new Exception("Não foi possível encontrar o método {$this->method}");
         }
         catch(Throwable $e){
-            echo json_encode($e->getMessage());
+            echo json_encode(["error" => $e->getMessage()]);
         }
     }
 
     private function router(): void{
-        $uri = array_reverse(array_filter(explode("/", $_SERVER["REQUEST_URI"])));
-        // Session::destruir();
-
-        $this->class  = Session::existe() ? "dist\\controllers\\". ($uri[1] ?? "Home") : "dist\\controllers\\Login";
-        $this->method = $uri[0] ?? "printView";
+        $this->class  = "dist\\controllers\\". ($_GET["pg"] ?? "Home");
+        $this->method = $_GET["acao"] ?? "printView";
     }
 }
 

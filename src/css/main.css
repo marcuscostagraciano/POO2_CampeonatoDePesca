@@ -9,6 +9,18 @@ body {
 
 input {
     display: block;
+
+    font-size: 1.1em;
+
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid black;
+
+    margin: 4px 0;
+}
+input:focus {
+    outline: none;
 }
 
 nav {
@@ -52,6 +64,17 @@ login-container button[type="submit"]{
 }
 login-container input {
     width: 100%;
+}
+
+main-container {
+    display: block;
+    width: 100%;
+
+    border: 1px solid #83838352;
+    border-radius: 10px;
+
+    margin: auto;
+    padding: 20px 30px;
 }
 
 .text-right {
