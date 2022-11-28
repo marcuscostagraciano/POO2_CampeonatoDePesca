@@ -15,7 +15,7 @@
         <mensagem-erro>Usuário não encontrado</mensagem-erro>
 
         <div>
-            <button type="submit">Entrar</button>
+            <button type="submit">Entre</button>
             <span>ou <a href="?pg=Cadastro">crie uma conta</a></span>
         </div>
     </form>

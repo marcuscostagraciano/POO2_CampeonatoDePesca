@@ -25,7 +25,7 @@ class App{
 
                 echo json_encode([
                     "ok"      => true,
-                    "retorno" => $resultado
+                    "retorno" => $resultado ?? true
                 ]);
             }
             else throw new Exception("Não foi possível encontrar o método {$this->method}");
