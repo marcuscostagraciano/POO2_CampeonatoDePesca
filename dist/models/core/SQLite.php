@@ -9,11 +9,10 @@ class SQLite {
     private $conexao;
 
     public function __construct(){
-        $this->fecharConexao();
-        $this->conexao = new PDO("sqlite:/src/sqlite/campeonato_pesca.db"); // Cria conexao com o banco
+        if($this->conexao == null) $this->conexao = new PDO("sqlite:src/sqlite/campeonato_pesca.db"); // Cria conexao com o banco
     }
 
-    public function query(string $sql, array $parametros = [], bool $fetchAll = true, bool $debug = false): array{
+    public function query(string $sql, array $parametros = [], bool $debug = false): array{
         $query = $this->conexao->prepare($sql); // Prepara o sql
 
         // Verifica se houve erros na execução.
@@ -26,9 +25,7 @@ class SQLite {
         );
 
         // Retorna o(s) resultado(s) do sql executado
-        return $fetchAll
-        ? $query->fetchAll(PDO::FETCH_ASSOC)
-        : $query->fetch(PDO::FETCH_ASSOC);
+        return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function fecharConexao(){

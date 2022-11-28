@@ -25,7 +25,7 @@ class LoginModel {
                 ":nome"  => $usuario,
                 ":senha" => $senha,
             ],
-            false
+            true
         );
     }
 }

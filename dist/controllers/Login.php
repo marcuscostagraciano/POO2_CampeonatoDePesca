@@ -11,10 +11,13 @@ class Login {
         MainView::printView("login");
     }
 
-    public function logar(): void{
+    public function logar(): bool{
         $usuario_info = LoginModel::logar($_POST["usuario_login"], $_POST["usuario_senha"]);
 
+        if(empty($usuario_info)) return false;
+        
         Session::criar($usuario_info["cpf"], $usuario_info["nome"], $usuario_info["email"]);
+        return true;
     }
 
     public function deslogar(): void{

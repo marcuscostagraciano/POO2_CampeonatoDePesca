@@ -77,6 +77,14 @@ main-container {
     padding: 20px 30px;
 }
 
+mensagem-erro {
+    display: none;
+
+    color: red;
+
+    font-size: 0.8em;
+}
+
 .text-right {
     text-align: right;
 }
