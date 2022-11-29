@@ -50,6 +50,7 @@ nav {
 
     display: grid;
     grid-template-columns: repeat(auto-fill, 70px);
+    grid-column-gap: 30px;
 
     padding: 0 30% 0 30%;
 }
@@ -96,6 +97,11 @@ main-container {
 
     margin: auto;
     padding: 20px 30px;
+}
+
+campeonato-evento {
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 mensagem-erro {

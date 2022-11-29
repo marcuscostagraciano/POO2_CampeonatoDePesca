@@ -3,7 +3,7 @@ window.addEventListener("load", () =>
     .then(res => {
         document.querySelector("#miniatura-usuario").innerHTML = (
             res.esta_logado
-            ? `<nome-usuario>${res.usuario}</nome-usuario>`
+            ? `<nome-usuario><a href="?pg=Login&acao=deslogar">${res.usuario}</a></nome-usuario>`
             : "<a href='?pg=Login'>Log in</a>"
         )
     })
