@@ -3,8 +3,8 @@
         <h2>Entrar na conta</h2>
 
         <div>
-            <label for="usuario-login">Usuario</label>
-            <input type="text" id="usuario-login" name="usuario_login">
+            <label for="usuario-cpf">CPF</label>
+            <input type="text" id="usuario-cpf" name="usuario_cpf" placeholder="___.___.___-__">
         </div>
 
         <div>

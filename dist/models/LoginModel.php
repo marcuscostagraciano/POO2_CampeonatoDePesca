@@ -7,8 +7,8 @@ use dist\models\core\SQLite;
 class LoginModel {
     private $conexao; 
 
-    public static function logar(string $usuario, string $senha){
-        $conexao = new SQLite;
+    public static function logar(int $cpf, string $senha): array{
+        $conexao = self::conectar();
         
         return $conexao->query(
             "SELECT
@@ -17,16 +17,19 @@ class LoginModel {
             nome,
             email
             
-            FROM pescador
+            FROM Pescador
             
-            WHERE nome  = :nome
-            AND   senha = :senha",
+            WHERE pk_cpf = :cpf
+            AND   senha  = :senha",
             [
-                ":nome"  => $usuario,
+                ":cpf"   => $cpf,
                 ":senha" => $senha,
-            ],
-            true
+            ]
         );
+    }
+
+    private static function conectar(){
+        return new SQLite;
     }
 }
 

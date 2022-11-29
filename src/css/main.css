@@ -25,11 +25,31 @@ input:focus {
     outline: none;
 }
 
+button[type="submit"] {
+    font-size: 1.05em;
+
+    border: 1px solid #2975e7;
+
+    margin: 30px 0;
+    padding: 4px 6px;
+}
+button[type="submit"]:hover {
+    background-color: #2975e7;
+    color: white;
+
+    font-size: 1.05em;
+
+    border: 1px solid #2975e7;
+
+    margin: 30px 0;
+    padding: 4px 6px;
+}
+
 nav {
     background-color: #d4d4d4;
 
     display: grid;
-    grid-template-columns: repeat(2, 70px) 800px;
+    grid-template-columns: repeat(auto-fill, 70px);
 
     padding: 0 30% 0 30%;
 }
@@ -43,6 +63,12 @@ main {
     margin: 0 0 0 30%;
 }
 
+grid-input {
+    display: grid;
+    grid-template-columns: repeat(4, 190px);
+    grid-column-gap: 30px;
+}
+
 login-container {
     position: absolute;
     top: 30%;
@@ -53,28 +79,6 @@ login-container {
     border-radius: 10px;
 
     padding: 20px 50px;
-}
-login-container button[type="submit"] {
-    /* background-color: #2975e7;
-    color: white; */
-
-    font-size: 1.05em;
-
-    border: 1px solid #2975e7;
-
-    margin: 30px 0;
-    padding: 4px 6px;
-}
-login-container button[type="submit"]:hover {
-    background-color: #2975e7;
-    color: white;
-
-    font-size: 1.05em;
-
-    border: 1px solid #2975e7;
-
-    margin: 30px 0;
-    padding: 4px 6px;
 }
 login-container input {
     width: 100%;
@@ -108,4 +112,8 @@ mensagem-erro {
 
 .text-center {
     text-align: center;
+}
+
+.input-email {
+    width: 400px;
 }

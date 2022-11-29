@@ -35,9 +35,11 @@ class App{
         }
     }
 
-    private function router(): void{
+    private function router(): bool{
         $this->class  = "dist\\controllers\\". ($_GET["pg"] ?? "Home");
         $this->method = $_GET["acao"] ?? "printView";
+
+        return true;
     }
 }
 

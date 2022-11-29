@@ -1,12 +1,14 @@
-fetchJson("?pg=Login&acao=existe")
-.then(res => {
-    document.querySelector("#miniatura-usuario").innerHTML = (
-        res.esta_logado
-        ? `<nome-usuario>${res.usuario}</nome-usuario>`
-        : "<a href='?pg=Login'>Log in</a>"
-    )
-})
-.catch(rej => mensagemError(rej))
+window.addEventListener("load", () =>
+    fetchJson("?pg=Login&acao=existe")
+    .then(res => {
+        document.querySelector("#miniatura-usuario").innerHTML = (
+            res.esta_logado
+            ? `<nome-usuario>${res.usuario}</nome-usuario>`
+            : "<a href='?pg=Login'>Log in</a>"
+        )
+    })
+    .catch(rej => mensagemError(rej))
+)
 
 // document.querySelector("#deslogar").addEventListener("click", async function(e){
 //     e.preventDefault()
