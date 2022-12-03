@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="/src/css/main.css" />
 
     <script src="/src/js/main.js"></script>
+    <script src="https://unpkg.com/imask"></script>
 </header>
 <body>
     <!-- barra de navegação -->
     <nav>
         <p><a href="">Home</a></p>
-        <p><a href="">Eventos</a></p>
+        <p><a href="?pg=Evento">Eventos</a></p>
         <p id="miniatura-usuario" class="text-right"><a href="">Log in</a></p>
     </nav>
 
