@@ -10,9 +10,7 @@ document.forms.cadastro.addEventListener("submit", async function(e){
     try{
         fetchJson("?pg=Cadastro&acao=cadastrar", new FormData(this))
 
-        const a = document.createElement("a")
-        a.href = "?"
-        a.click()
+        alterarPagina()
     }
     catch(rej){
         mensagemError(rej)

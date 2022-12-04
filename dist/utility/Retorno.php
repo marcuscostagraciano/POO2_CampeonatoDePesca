@@ -3,7 +3,7 @@
 namespace dist\utility;
 
 class Retorno {
-    public static function ok(array $retorno): void{
+    public static function ok(array $retorno = []): void{
         $retorno["ok"] = true;
         echo json_encode($retorno);
     }

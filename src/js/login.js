@@ -13,7 +13,7 @@ document.forms.login.addEventListener("submit", async function(e){
             return false
         }
 
-        location.reload()
+        alterarPagina()
     }
     catch(rej){
         mensagemError(rej)

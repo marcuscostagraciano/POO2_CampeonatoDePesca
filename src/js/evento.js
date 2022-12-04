@@ -1,21 +1,74 @@
 window.addEventListener("load", async function(e){
     fetchJson("?pg=Evento&acao=puxarCampeonatos")
-    .then(eventos => eventos.rows.map(evento => {
-        console.dir(evento)
+    .then(eventos => {
+        const caixas_evento = eventos.rows.map(evento => {
+            console.dir(evento)
+            
+            return `
+                <caixa-evento>
+                    <h4>${evento.nome_campeonato}</h4>
+                    
+                    <div style="
+                        display: grid;
+                        grid-template-columns: 170px 1fr;
+                    ">
+                        <div>
+                            <div style="height: 70px; border: 1px solid black; line-height: 60px; text-align: center;">imagem exemplo</div>
+                            <div style="margin: 5px; text-align: center;">
+                                Data: ${evento.data.split("-").reverse().join("/")}
+                            </div>
+                        </div>
 
-        const data = evento.data.split("-").reverse().join("/")
-        
-        return `
-            <caixa-evento>
-                <h4>${evento.nome_campeonato}</h4>
-                
-                <div style="width: 170px; height: 70px; border: 1px solid black; line-height: 60px; text-align: center;">imagem exemplo</div>
-                <div style="margin: 5px;">
-                    Data: ${evento.data.split("-").reverse().join("/")}
-                </div>
-            </caixa-evento>
-        `
-    }).join(""))
-    .then(caixas_evento => {this.document.querySelector("main-container").innerHTML = caixas_evento})
+                        <div id="inscrever-${evento.pk_campeonato}">
+                        </div>
+                    </div>
+                </caixa-evento>
+            `
+        }).join("")
+
+        return {
+            caixas_evento: caixas_evento,
+            eventos: eventos
+        }
+    })
+    .then(res => {
+        this.document.querySelector("main-container").innerHTML = res.caixas_evento
+
+        res.eventos.rows.map(evento => this.document.querySelector(`#inscrever-${evento.pk_campeonato}`).append(botaoInscrever(evento.pk_campeonato)))
+    })
     .catch(rej => mensagemError(rej))
 })
+
+function botaoInscrever(id_campeonato){
+    const botao = document.createElement("button")
+    botao.classList.add("botao-inscrever")
+    botao.innerText = "Inscrever-se"
+
+    botao.addEventListener("click", async function(e){
+        e.preventDefault()
+
+        try{
+            const formData = new FormData
+            formData.append("id_campeonato", id_campeonato)
+
+            // const a = await fetch("?pg=Evento&acao=inscreverEvento", {
+            //     method: "POST",
+            //     body: formData
+            // })
+
+            // const b = await a.text()
+
+            // console.dir(b)
+
+            const inscrever = await fetchJson("?pg=Evento&acao=inscreverEvento", formData, true)
+
+            this.innerText = "Inscrito"
+            this.disabled = true
+        }
+        catch(rej){
+            mensagemError(rej)
+        }
+    })
+
+    return botao
+}

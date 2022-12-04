@@ -20,8 +20,8 @@ class Session {
         return true;
     }
 
-    public static function id(){
-        return $_SESSION["id"];
+    public static function cpf(){
+        return $_SESSION["cpf"];
     }
 
     public static function nome(){
