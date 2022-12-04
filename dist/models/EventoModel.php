@@ -5,7 +5,7 @@ namespace dist\models;
 use dist\models\core\SQLite;
 
 class EventoModel{
-    public static function puxarCampeonatos(): array{
+    public static function puxarCampeonatos(){
         $conexao = self::conectar();
 
         return $conexao->query(

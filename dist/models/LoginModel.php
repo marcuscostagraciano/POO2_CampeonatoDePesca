@@ -7,7 +7,7 @@ use dist\models\core\SQLite;
 class LoginModel {
     private $conexao; 
 
-    public static function logar(int $cpf, string $senha): array{
+    public static function logar(int $cpf, string $senha){
         $conexao = self::conectar();
         
         return $conexao->query(

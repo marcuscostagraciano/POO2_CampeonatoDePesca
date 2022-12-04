@@ -5,7 +5,7 @@ namespace dist\models;
 use dist\models\core\SQLite;
 
 class CadastroModel{
-    public static function cadastrar($usuario_cpf, $usuario_nome, $usuario_sobrenome, $usuario_senha, $usuario_email): bool{
+    public static function cadastrar($usuario_cpf, $usuario_nome, $usuario_sobrenome, $usuario_senha, $usuario_email){
         $conexao = self::conectar();
 
         $conexao->query(

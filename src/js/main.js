@@ -40,7 +40,7 @@ async function fetchJson(url, formData = new FormData, debug = false){
     if(debug) console.dir(json)
     if(!json.ok) throw new Error(json.error)
     
-    return json.retorno
+    return json
 }
 
 // Trata os erros recebidos
