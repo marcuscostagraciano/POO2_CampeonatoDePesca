@@ -16,7 +16,7 @@
 
         <div>
             <button type="submit">Entre</button>
-            <span>ou <a href="?pg=Cadastro">crie uma conta</a></span>
+            <span>ou <a href="?url=Cadastro">crie uma conta</a></span>
         </div>
     </form>
 </login-container>

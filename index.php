@@ -5,7 +5,7 @@
  * No caso, será o autoloader.php.
  */
 
-// require_once "autoloader.php";
+require_once "autoloader.php";
 
 require_once "dist/controllers/core/Router.php";
 

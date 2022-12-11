@@ -8,7 +8,7 @@ document.forms.cadastro.addEventListener("submit", async function(e){
     e.preventDefault()
 
     try{
-        fetchJson("?pg=Cadastro&acao=cadastrar", new FormData(this))
+        fetchJson("?url=Cadastro/cadastrar", new FormData(this))
 
         alterarPagina()
     }

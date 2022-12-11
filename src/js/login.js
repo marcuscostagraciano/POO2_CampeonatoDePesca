@@ -6,7 +6,7 @@ document.forms.login.addEventListener("submit", async function(e){
     e.preventDefault();
     
     try{
-        const logar = await fetchJson("?pg=Login&acao=logar", new FormData(this))
+        const logar = await fetchJson("?url=Login/logar", new FormData(this))
 
         if(!logar.sucesso) {
             document.querySelector("mensagem-erro").style.display = "inline"

@@ -16,13 +16,8 @@ class Router
         try {
             $url = $this->parseUrl();
             
-            $this->controller = ucfirst($url[0]);
+            $this->controller = "dist\\controllers\\" . ucfirst($url[0]);
             unset($url[0]);
-            
-            $arquivo = "dist/controllers/" . $this->controller . ".php";
-
-            if (!file_exists($arquivo)) throw new Exception("Arquivo não encontrado");
-            require_once $arquivo;
             
             if (!class_exists($this->controller)) throw new Exception("Classe \"{$this->controller}\" não encontrada");
             $this->controller = new $this->controller;

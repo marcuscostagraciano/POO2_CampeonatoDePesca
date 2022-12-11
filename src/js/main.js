@@ -1,17 +1,17 @@
 window.addEventListener("load", () =>
-    fetchJson("?pg=Login&acao=existe")
+    fetchJson("?url=Login/existe")
     .then(res => {
         document.querySelector("#miniatura-usuario").innerHTML = (
             res.esta_logado
-            ? `<nome-usuario><a href="?pg=Login&acao=deslogar">${res.usuario}</a></nome-usuario>`
-            : "<a href='?pg=Login'>Log in</a>"
+            ? `<nome-usuario><a href="?url=Login/deslogar">${res.usuario}</a></nome-usuario>`
+            : "<a href='?url=Login'>Log in</a>"
         )
     })
     .catch(rej => mensagemError(rej))
 )
 
 function botaoDeslogar(){
-    fetchJson("?pg=Login&acao=deslogar")
+    fetchJson("?url=Login/deslogar")
     
     setTimeout(alterarPagina, 1000)
     // alterarPagina()
@@ -34,7 +34,7 @@ async function fetchJson(url, formData = new FormData, debug = false){
     return json
 }
 
-function alterarPagina(pagina = "?pg=Home"){
+function alterarPagina(pagina = "?url=Home"){
     const a = document.createElement("a")
     a.href = pagina
     a.click()

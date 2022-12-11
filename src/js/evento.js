@@ -1,5 +1,5 @@
 window.addEventListener("load", async function(e){
-    fetchJson("?pg=Evento&acao=puxarCampeonatos")
+    fetchJson("?url=Evento/puxarCampeonatos")
     .then(eventos => {
         const caixas_evento = eventos.rows.map(evento => {
             console.dir(evento)
@@ -51,7 +51,7 @@ function botaoInscrever(id_campeonato){
             const formData = new FormData
             formData.append("id_campeonato", id_campeonato)
 
-            // const a = await fetch("?pg=Evento&acao=inscreverEvento", {
+            // const a = await fetch("?url=Evento/inscreverEvento", {
             //     method: "POST",
             //     body: formData
             // })
@@ -60,7 +60,7 @@ function botaoInscrever(id_campeonato){
 
             // console.dir(b)
 
-            const inscrever = await fetchJson("?pg=Evento&acao=inscreverEvento", formData, true)
+            const inscrever = await fetchJson("?url=Evento/inscreverEvento", formData, true)
 
             this.innerText = "Inscrito"
             this.disabled = true

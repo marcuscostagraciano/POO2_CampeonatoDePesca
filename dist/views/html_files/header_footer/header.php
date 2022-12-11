@@ -12,8 +12,8 @@
 <body>
     <!-- barra de navegação -->
     <nav>
-        <p><a href="?pg=Home">Home</a></p>
-        <p><a href="?pg=Evento">Eventos</a></p>
+        <p><a href="?url=Home">Home</a></p>
+        <p><a href="?url=Evento">Eventos</a></p>
         <p id="miniatura-usuario" class="text-right"><a href="">Log in</a></p>
     </nav>
 
