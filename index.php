@@ -5,10 +5,12 @@
  * No caso, será o autoloader.php.
  */
 
-require_once "autoloader.php";
+// require_once "autoloader.php";
 
-use dist\controllers\core\App;
+require_once "dist/controllers/core/Router.php";
 
-$router = new App();
+use dist\controllers\core\Router;
+
+$router = new Router;
 
 ?>
