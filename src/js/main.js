@@ -34,7 +34,7 @@ async function fetchJson(url, formData = new FormData, debug = false){
     return json
 }
 
-function alterarPagina(pagina = "?url=Home"){
+function alterarPagina(pagina = "Home"){
     const a = document.createElement("a")
     a.href = pagina
     a.click()

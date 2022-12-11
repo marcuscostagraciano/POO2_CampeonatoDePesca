@@ -51,16 +51,16 @@ function botaoInscrever(id_campeonato){
             const formData = new FormData
             formData.append("id_campeonato", id_campeonato)
 
-            // const a = await fetch("?url=Evento/inscreverEvento", {
-            //     method: "POST",
-            //     body: formData
-            // })
+            const a = await fetch("?pg=Evento&acao=inscreverEvento", {
+                method: "POST",
+                body: formData
+            })
 
-            // const b = await a.text()
+            const b = await a.text()
 
-            // console.dir(b)
+            console.dir(b)
 
-            const inscrever = await fetchJson("?url=Evento/inscreverEvento", formData, true)
+            // const inscrever = await fetchJson("?url=Evento/inscreverEvento", formData, true)
 
             this.innerText = "Inscrito"
             this.disabled = true

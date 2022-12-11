@@ -26,6 +26,7 @@ class Login {
 
     public function deslogar(){
         Session::destruir();
+        $this->printView();
     }
 
     public function existe(){
