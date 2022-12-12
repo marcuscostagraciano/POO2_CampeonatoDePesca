@@ -42,33 +42,51 @@ window.addEventListener("load", async function(e){
 function botaoInscrever(id_campeonato){
     const botao = document.createElement("button")
     botao.classList.add("botao-inscrever")
-    botao.innerText = "Inscrever-se"
 
-    botao.addEventListener("click", async function(e){
-        e.preventDefault()
+    const formData = new FormData
+    formData.append("id_campeonato", id_campeonato)
 
-        try{
-            const formData = new FormData
-            formData.append("id_campeonato", id_campeonato)
+    // fetchJson("?url=evento/verificarEvento", formData, true)
+    // .then(res => {
+    //     if(res.esta_cadastrado){
+    //         botao.innerText = "Inscrito"
+    //         botao.disabled  = true
 
-            const a = await fetch("?pg=Evento&acao=inscreverEvento", {
-                method: "POST",
-                body: formData
-            })
+    //         return false
+    //     }
+        
+        botao.innerText = "Inscrever-se"
 
-            const b = await a.text()
-
-            console.dir(b)
-
-            // const inscrever = await fetchJson("?url=Evento/inscreverEvento", formData, true)
-
-            this.innerText = "Inscrito"
+        botao.addEventListener("click", async function(e){
+            e.preventDefault()
+            
             this.disabled = true
-        }
-        catch(rej){
-            mensagemError(rej)
-        }
-    })
+    
+            try{
+                // const formData = new FormData
+                // formData.append("id_campeonato", id_campeonato)
+    
+                // const a = await fetch("?url=Evento/inscreverEvento", {
+                //     method: "POST",
+                //     body: formData
+                // })
+    
+                // const b = await a.text()
+    
+                // console.dir(b)
+    
+                const inscrever = await fetchJson("?url=Evento/inscreverEvento", formData, true)
+    
+                this.innerText = "Inscrito"
+                
+            }
+            catch(rej){
+                mensagemError(rej)
+                this.disabled = false
+            }
+        })
+    // })
+    // .catch(rej => mensagemError(rej))
 
     return botao
 }

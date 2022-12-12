@@ -25,6 +25,21 @@ class Evento{
             Retorno::erro($e->getMessage());
         }
     }
+
+    public function verificarEvento(){
+        try{
+            // Retorno::ok($_POST);
+            // return false;
+            Retorno::ok(
+                [
+                    "esta_cadastrado" => EventoModel::verificarEvento($_POST["id_campeonato"]),
+                ]
+            );
+        }
+        catch(Throwable $e){
+            Retorno::erro($e->getMessage());
+        }
+    }
 }
 
 ?>
