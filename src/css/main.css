@@ -119,6 +119,26 @@ mensagem-erro {
     font-size: 0.8em;
 }
 
+button.botao-inscrever {
+    font-size: 1.05em;
+
+    border: 1px solid #bb4040;
+
+    margin: 30px;
+    padding: 4px 6px;
+}
+button.botao-inscrever:hover {
+    background-color: #bb4040;
+    color: white;
+
+    font-size: 1.05em;
+
+    border: 1px solid #bb4040;
+
+    margin: 30px;
+    padding: 4px 6px;
+}
+
 .text-right {
     text-align: right;
 }

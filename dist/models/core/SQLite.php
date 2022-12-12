@@ -12,7 +12,7 @@ class SQLite {
         if($this->conexao == null) $this->conexao = new PDO("sqlite:src/sqlite/campeonato_pesca.db"); // Cria conexao com o banco
     }
 
-    public function query(string $sql, array $parametros = [], bool $debug = false): array{
+    public function query(string $sql, array $parametros = [], bool $debug = false){
         $query = $this->conexao->prepare($sql); // Prepara o sql
 
         // Verifica se houve erros na execução.
