@@ -1,4 +1,4 @@
-    IMask(document.forms.login.usuario_cpf, {mask: "000.000.000-00"})
+IMask(document.forms.login.usuario_cpf, {mask: "000.000.000-00"})
 
 document.forms.login.reset()
 
