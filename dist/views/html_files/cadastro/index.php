@@ -44,7 +44,7 @@
         e.preventDefault()
 
         try{
-            await fetchJson("?url=Cadastro/cadastrar", new FormData(this), true)
+            await fetchJson("?url=Cadastro/cadastrar", new FormData(this))
         }
         catch(rej){
             mensagemError(rej)

@@ -80,7 +80,7 @@
         
                     // console.dir(b)
         
-                    const inscrever = await fetchJson("?url=Evento/inscreverEvento", formData, true)
+                    const inscrever = await fetchJson("?url=Evento/inscreverEvento", formData)
         
                     this.innerText = "Inscrito"
                     
