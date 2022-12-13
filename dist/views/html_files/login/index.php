@@ -30,7 +30,7 @@
         e.preventDefault();
         
         try{
-            const logar = await fetchJson("?url=Login/logar", new FormData(this), true)
+            const logar = await fetchJson("?url=Login/logar", new FormData(this))
 
             if(!logar.sucesso) {
                 document.querySelector("mensagem-erro").style.display = "inline"
