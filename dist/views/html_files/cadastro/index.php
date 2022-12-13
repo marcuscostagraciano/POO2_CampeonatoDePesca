@@ -36,9 +36,7 @@
 </main-container>
 
 <script>
-    const form = document.forms.cadastro
-
-    IMask(form.usuario_cpf, {mask: "000.000.000-00"})
+    IMask(document.forms.cadastro.usuario_cpf, {mask: "000.000.000-00"})
 
     document.forms.cadastro.reset() // Reseta o formulário
 
@@ -46,9 +44,7 @@
         e.preventDefault()
 
         try{
-            fetchJson("?url=Cadastro/cadastrar", new FormData(this))
-
-            alterarPagina()
+            await fetchJson("?url=Cadastro/cadastrar", new FormData(this), true)
         }
         catch(rej){
             mensagemError(rej)
