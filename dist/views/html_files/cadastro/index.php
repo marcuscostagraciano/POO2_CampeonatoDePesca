@@ -34,3 +34,20 @@
         </div>
     </form>
 </main-container>
+
+<script>
+    IMask(document.forms.cadastro.usuario_cpf, {mask: "000.000.000-00"})
+
+    document.forms.cadastro.reset() // Reseta o formulário
+
+    document.forms.cadastro.addEventListener("submit", async function(e){
+        e.preventDefault()
+
+        try{
+            await fetchJson("?url=Cadastro/cadastrar", new FormData(this), true)
+        }
+        catch(rej){
+            mensagemError(rej)
+        }
+    })
+</script>

@@ -14,19 +14,9 @@ class EventoModel{
         return $conexao->query(
             "SELECT 
             
-            cam.*
+            *
             
-            FROM Campeonatos cam
-            
-            LEFT JOIN Prova pro
-            ON pro.fk_campeonato = cam.pk_campeonato
-            
-            LEFT JOIN Colocacao col
-            ON  col.fk_codProva = pro.pk_prova
-            AND col.fk_cpf      <> :cpf",
-            [
-                ":cpf" => Session::cpf()
-            ]
+            FROM Campeonatos"
         );
     }
 

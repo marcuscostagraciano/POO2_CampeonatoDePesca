@@ -18,8 +18,11 @@ class Login {
         
         $usuario_info = LoginModel::logar($_POST["usuario_cpf"], $_POST["usuario_senha"]);
 
-        if(empty($usuario_info)) Retorno::ok(["sucesso" => false]);
-        
+        if(empty($usuario_info)){
+            Retorno::ok(["sucesso" => false]);
+            return false;
+        }
+
         Session::criar($usuario_info[0]["pk_cpf"], $usuario_info[0]["nome"], $usuario_info[0]["email"]);
         Retorno::ok(["sucesso" => true]);
     }
